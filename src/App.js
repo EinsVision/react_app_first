@@ -1,35 +1,50 @@
 import React from 'react';
 import './App.css';
+import Avocado from './Avocado';
 
-const data = [
-  {
-    id: 1,
-    title: 'Node',
-    value: 0
-  },
-  {
-    id: 2,
-    title: 'React',
-    value: 1
-  }
-];
+const Head = props => <h1>{props.title}</h1>
 
-function App() {
-  return (
-    <div className="App-header">
-      Hello React!
-      {
-        data.map(ele =>(
-          <>
-            <p key={ele.id}>{ele.title}, {ele.value}</p>
-          </>
-        ))
-      }
-    </div>
+function App(){
+  return(
+    <>
+      <h1 className='App-link'>Hello</h1>
+      <Head title='This is a title'/>
+      <Head title='React is useful.'/>
+      <Avocado />
+    </>
   );
 }
 
 export default App;
+
+
+// const data = [
+//   {
+//     id: 1,
+//     title: 'Node',
+//     value: 0
+//   },
+//   {
+//     id: 2,
+//     title: 'React',
+//     value: 1
+//   }
+// ];
+
+// function App() {
+//   return (
+//     <div className="App-header">
+//       Hello React!
+//       {
+//         data.map(ele =>(
+//           <>
+//             <p key={ele.id}>{ele.title}, {ele.value}</p>
+//           </>
+//         ))
+//       }
+//     </div>
+//   );
+// }
 
 //React 장점
 // 1. Virtual DOM
@@ -52,3 +67,6 @@ export default App;
 // 5. Server Sice Rendering (feat. SEO)
 // 검색엔진 최적화 문제를 해결했다. Node.JS에서 page rendering하는 하는 것을 말한다.
 
+//JSX와 Fragment
+// React는 모든 것을 view로 본다. JSX : javascript 확장해서 마치 XML 문법 처럼 만든 것을 말한다.
+// Fragment: <> </> 
