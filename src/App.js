@@ -1,19 +1,7 @@
 import React from 'react';
 import './App.css';
-import Avocado from './Avocado';
 
-const Head = props => <h1>{props.title}</h1>
 
-function App(){
-  return(
-    <>
-      <h1 className='App-link'>Hello</h1>
-      <Head title='This is a title'/>
-      <Head title='React is useful.'/>
-      <Avocado />
-    </>
-  );
-}
 
 export default App;
 
@@ -70,3 +58,80 @@ export default App;
 //JSX와 Fragment
 // React는 모든 것을 view로 본다. JSX : javascript 확장해서 마치 XML 문법 처럼 만든 것을 말한다.
 // Fragment: <> </> 
+
+// const Head = props => <h1>{props.title}</h1>
+
+// function App(){
+//   return(
+//     <>
+//       <h1 className='App-link'>Hello</h1>
+//       <Head title='This is a title'/>
+//       <Head title='React is useful.'/>
+//       <Avocado />
+//     </>
+//   );
+// }
+
+
+// import Avocado from './Avocado';
+
+// const Loading = () => <div>Loading...</div>;
+
+// class App extends React.Component{
+//   constructor(props){
+//     super(props)
+//     this.state = {
+//       loading: true
+//     }
+//   }
+//   comment(){
+//     const con = 1;
+//     const result = (con > 0) ? true : false; 
+
+//     console.log(result);
+//   }
+
+//   render(){
+//     const {loading} = this.state;
+//     return(
+//       <>
+//         {
+//           loading ? <Loading/> : <div>This is a webpage.</div>
+//         }
+//       </>
+//     );
+//   }
+// }
+
+//  component life cycle
+// class App extends React.Component{
+//   constructor(props){
+//     super(props)
+
+//   }
+
+//   componentWillMount(){
+//     console.log('componentWillMount');
+//   }
+
+//   render(){
+//     console.log('render');
+//     return(
+//       <>
+//         {
+
+//         }
+//       </>
+//     )
+//   }
+
+//   componentDidMount(){
+//     console.log('componentDidMount');
+//   }
+
+//   componentWillUnmount(){
+//     console.log('componentWillUnmount');
+//   }
+
+  
+// }
